@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Mr.M">
 <meta property="og:description" content="创建vue项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T10:24:45.760Z">
+<meta property="og:updated_time" content="2019-04-01T10:29:06.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue my work">
 <meta name="twitter:description" content="创建vue项目">
@@ -434,7 +434,7 @@
 <p>5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure></p>
 <p>先不推送，<br>在编辑器中 preferences =&gt; plugins 搜索ignore，install .ignore，<br>新建 .gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Created by .ignore support plugin (hsz.mobi)</span></span><br><span class="line">.idea/</span><br><span class="line">*.iml</span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure></p>
 <p>以上三个文件不上传</p>
-<p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master   // 设定主分支并上传</span><br></pre></td></tr></table></figure></p>
 <p>初次创建报错： fatal: Couldn’t find remote ref master  不用管</p>
 <h2 id="在node项目中使用monogDB"><a href="#在node项目中使用monogDB" class="headerlink" title="在node项目中使用monogDB"></a>在node项目中使用monogDB</h2><p>1 导入monogDB连接模块，express 官方介绍的是mongoskin模块，这里介绍通过mongoose安装</p>
 <p>2 项目下执行命令 npm install mongoose -save 安装保存到node_modules，<br>也可以在package.json中配置”mongoose”: “^4.4.12”,然后命令npm install 安装。<a href="https://github.com/Automattic/mongoose" target="_blank" rel="noopener">https://github.com/Automattic/mongoose</a></p>
