@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Mr.M">
 <meta property="og:description" content="创建vue项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-28T08:40:15.542Z">
+<meta property="og:updated_time" content="2019-04-01T09:50:56.451Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue my work">
 <meta name="twitter:description" content="创建vue项目">
@@ -425,8 +425,19 @@
 <p>安装所有依赖包：</p>
 <p>$ cd myapp<br>$ npm install</p>
 <p>在 MacOS 或 Linux 中，通过如下命令启动此应用：<br>$ DEBUG=myapp:* npm start</p>
+<h2 id="将项目提交到git"><a href="#将项目提交到git" class="headerlink" title="将项目提交到git"></a>将项目提交到git</h2><p>（My git 2646…<a href="mailto:11@qq.com" target="_blank" rel="noopener">11@qq.com</a> phone+name）<br>git 上点 New repository</p>
+<p>1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
+<p>2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .   // 不要丢了空格和点</span><br></pre></td></tr></table></figure></p>
+<p>3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">'first commit'</span></span><br></pre></td></tr></table></figure></p>
+<p>4、关联到远程库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin  // 你的远程库地址</span><br></pre></td></tr></table></figure></p>
+<p>如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/githubusername/demo.git</span><br></pre></td></tr></table></figure></p>
+<p>5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure></p>
+<p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure></p>
+<p>初次创建报错： fatal: Couldn’t find remote ref master  不用管</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
 <h2 id="在node项目中使用monogDB"><a href="#在node项目中使用monogDB" class="headerlink" title="在node项目中使用monogDB"></a>在node项目中使用monogDB</h2><p>1 导入monogDB连接模块，express 官方介绍的是mongoskin模块，这里介绍通过mongoose安装</p>
 <p>2 项目下执行命令 npm install mongoose -save 安装保存到node_modules，<br>也可以在package.json中配置”mongoose”: “^4.4.12”,然后命令npm install 安装。<a href="https://github.com/Automattic/mongoose" target="_blank" rel="noopener">https://github.com/Automattic/mongoose</a></p>
+<p>坑！！<br>将文件命名为类似模块名的名字 mongodb.js<br>const mongodb = require(‘./mongodb’);<br>如果全局有这个变量 会覆盖全局的</p>
 
       
     </div>
@@ -656,7 +667,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vue"><span class="nav-number">1.</span> <span class="nav-text">安装vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">3.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">4.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vue"><span class="nav-number">1.</span> <span class="nav-text">安装vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">3.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将项目提交到git"><span class="nav-number">4.</span> <span class="nav-text">将项目提交到git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">5.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li></ol></div>
             
 
           </div>
