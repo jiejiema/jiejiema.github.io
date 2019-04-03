@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="使用homebrew安装，便于维护">
-<meta name="keywords" content="soft">
+  <meta name="description" content="创建vue项目">
+<meta name="keywords" content="frame">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 安装MongoDB redis">
-<meta property="og:url" content="https://jiejiema.github.io/mongodb/index.html">
+<meta property="og:title" content="tasktime">
+<meta property="og:url" content="https://jiejiema.github.io/taskTimeEg/index.html">
 <meta property="og:site_name" content="Mr.M">
-<meta property="og:description" content="使用homebrew安装，便于维护">
+<meta property="og:description" content="创建vue项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-03-27T10:28:39.329Z">
+<meta property="og:updated_time" content="2019-04-03T03:50:12.008Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 安装MongoDB redis">
-<meta name="twitter:description" content="使用homebrew安装，便于维护">
+<meta name="twitter:title" content="tasktime">
+<meta name="twitter:description" content="创建vue项目">
 
 
 
 
 
 
-  <link rel="canonical" href="https://jiejiema.github.io/mongodb/">
+  <link rel="canonical" href="https://jiejiema.github.io/taskTimeEg/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Mac 安装MongoDB redis | Mr.M</title>
+  <title>tasktime | Mr.M</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiejiema.github.io/mongodb/">
+    <link itemprop="mainEntityOfPage" href="https://jiejiema.github.io/taskTimeEg/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.M">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac 安装MongoDB redis
+          <h1 class="post-title" itemprop="name headline">tasktime
 
               
             
@@ -375,7 +375,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/soft/" itemprop="url" rel="index"><span itemprop="name">soft</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/frame/" itemprop="url" rel="index"><span itemprop="name">frame</span></a></span>
 
                 
                 
@@ -396,7 +396,7 @@
           
 
           
-            <div class="post-description">使用homebrew安装，便于维护</div>
+            <div class="post-description">创建vue项目</div>
           
 
         </div>
@@ -412,16 +412,30 @@
       
 
       
-        <p>Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>访问<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">Homebrew</a> 官网获取安装命令。<br>安装完成后先执行以下命令安装 curl 和 wget。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew install curl</span><br><span class="line">brew install wget</span><br><span class="line">curl --version</span><br><span class="line">wget --version</span><br></pre></td></tr></table></figure>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">brew list <span class="comment"># 列出当前已经安装的包</span></span><br><span class="line">brew search <span class="variable">$FORMULA</span> <span class="comment"># 搜索一个想安装的包</span></span><br><span class="line">brew info <span class="variable">$FORMULA</span> <span class="comment"># 列出指定包的相关信息</span></span><br><span class="line">brew info <span class="comment"># 显示安装了包数量，文件数量，和总占用空间</span></span><br><span class="line">brew deps --installed --tree <span class="comment"># 查看已安装的包的依赖，树形显示</span></span><br><span class="line"></span><br><span class="line">brew install <span class="variable">$FORMULA</span> <span class="comment"># 安装指定包</span></span><br><span class="line">brew uninstall <span class="variable">$FORMULA</span> <span class="comment"># 卸载指定包</span></span><br><span class="line"></span><br><span class="line">brew update <span class="comment"># 升级brew自身和源仓库</span></span><br><span class="line">brew outdated <span class="comment"># 列出有哪些包可以更新</span></span><br><span class="line">brew upgrade <span class="variable">$FORMULA</span> <span class="comment"># 更新指定的包</span></span><br><span class="line">brew upgrade <span class="comment"># 更新所有的可更新包</span></span><br><span class="line"></span><br><span class="line">brew cleanup <span class="variable">$FORMULA</span> <span class="comment"># 清理指定包的旧版本及安装文件</span></span><br><span class="line">brew cleanup <span class="comment"># 清理所有包的旧版本及安装文件</span></span><br><span class="line">brew cleanup -n <span class="comment"># 查看可清理的旧版本包，不执行实际操作</span></span><br><span class="line"></span><br><span class="line">brew pin <span class="variable">$FORMULA</span> <span class="comment"># 锁定某个包</span></span><br><span class="line">brew unpin <span class="variable">$FORMULA</span> <span class="comment"># 取消锁定</span></span><br><span class="line"></span><br><span class="line">brew cask install/info/list... <span class="comment"># 这一系列的命令用来管理以二进制方式分发的包，比如docker和oracle jdk</span></span><br><span class="line">brew tap <span class="comment"># 用来添加第三方源仓库，类似apt的ppa，不加参数将列出已经添加的源仓库</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h2><p>安装redis 即 把 mongodb 替换为 redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb</span><br><span class="line">brew services run mongodb <span class="comment">#启动服务</span></span><br><span class="line">brew services list  <span class="comment"># 查看当前服务列表</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info mongodb  //找到mongodb 目录</span><br></pre></td></tr></table></figure>
-<p>可视化工具 robo<br><a href="https://robomongo.org/download" target="_blank" rel="noopener">https://robomongo.org/download</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo   // 在命令行内访问 没启动的话不会启动</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services list  // 查看所有启动的服务</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start mongodb  // 启动</span><br></pre></td></tr></table></figure>
+        <h2 id="安装express"><a href="#安装express" class="headerlink" title="安装express"></a>安装express</h2><p>npm install -g express-generator  // 注意中间不是空格，否则是安装express 和 generator两个包</p>
+<p>创建express文件</p>
+<p>方法一：用webstrom</p>
+<p>//express（images/nodeNewProject.jpg）</p>
+<p>file =&gt; new =&gt; project =&gt; Node.js Express App<br>在View Engine中选择用的模板(类似于java中jsp)<br>Stylesheet Engine 中选 css预处理方式</p>
+<p>方法二： 命令行<br>参考<a href="http://www.expressjs.com.cn/starter/generator.html官网" target="_blank" rel="noopener">http://www.expressjs.com.cn/starter/generator.html官网</a></p>
+<p>$ express –view=pug myapp  //–view=pug 选择模板 可不写， myapp 名称</p>
+<p>安装所有依赖包：</p>
+<p>$ cd myapp<br>$ npm install</p>
+<p>在 MacOS 或 Linux 中，通过如下命令启动此应用：<br>$ DEBUG=myapp:* npm start</p>
+<h2 id="将项目提交到git"><a href="#将项目提交到git" class="headerlink" title="将项目提交到git"></a>将项目提交到git</h2><p>（My git 2646…<a href="mailto:11@qq.com" target="_blank" rel="noopener">11@qq.com</a> phone+name）<br>git 上点 New repository</p>
+<p>1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
+<p>2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .   // 不要丢了空格和点</span><br></pre></td></tr></table></figure></p>
+<p>3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">'first commit'</span></span><br></pre></td></tr></table></figure></p>
+<p>4、关联到远程库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin  // 你的远程库地址</span><br></pre></td></tr></table></figure></p>
+<p>如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/githubusername/demo.git</span><br></pre></td></tr></table></figure></p>
+<p>5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure></p>
+<p>先不推送，<br>在编辑器中 preferences =&gt; plugins 搜索ignore，install .ignore，<br>新建 .gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Created by .ignore support plugin (hsz.mobi)</span></span><br><span class="line">.idea/</span><br><span class="line">*.iml</span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure></p>
+<p>以上三个文件不上传</p>
+<p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master   // 设定主分支并上传</span><br></pre></td></tr></table></figure></p>
+<p>初次创建报错： fatal: Couldn’t find remote ref master  不用管</p>
+<h2 id="在node项目中使用monogDB"><a href="#在node项目中使用monogDB" class="headerlink" title="在node项目中使用monogDB"></a>在node项目中使用monogDB</h2><p>1 导入monogDB连接模块，express 官方介绍的是mongoskin模块，这里介绍通过mongoose安装</p>
+<p>2 项目下执行命令 npm install mongoose -save 安装保存到node_modules，<br>也可以在package.json中配置”mongoose”: “^4.4.12”,然后命令npm install 安装。<a href="https://github.com/Automattic/mongoose" target="_blank" rel="noopener">https://github.com/Automattic/mongoose</a></p>
+<p>坑！！<br>将文件命名为类似模块名的名字 mongodb.js<br>const mongodb = require(‘./mongodb’);<br>如果全局有这个变量 会覆盖全局的</p>
 
       
     </div>
@@ -456,7 +470,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://jiejiema.github.io/mongodb/" title="Mac 安装MongoDB redis">https://jiejiema.github.io/mongodb/</a>
+    <a href="https://jiejiema.github.io/taskTimeEg/" title="tasktime">https://jiejiema.github.io/taskTimeEg/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -469,7 +483,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/soft/" rel="tag"># soft</a>
+            <a href="/tags/frame/" rel="tag"># frame</a>
           
         </div>
       
@@ -482,15 +496,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/vue/" rel="next" title="Vue">
+                <i class="fa fa-chevron-left"></i> Vue
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -651,7 +665,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MongoDB"><span class="nav-number">3.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">1.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将项目提交到git"><span class="nav-number">2.</span> <span class="nav-text">将项目提交到git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">3.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li></ol></div>
             
 
           </div>

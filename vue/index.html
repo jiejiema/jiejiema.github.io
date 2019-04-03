@@ -99,14 +99,14 @@
   <meta name="description" content="创建vue项目">
 <meta name="keywords" content="frame">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue my work">
+<meta property="og:title" content="Vue">
 <meta property="og:url" content="https://jiejiema.github.io/vue/index.html">
 <meta property="og:site_name" content="Mr.M">
 <meta property="og:description" content="创建vue项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T10:29:06.269Z">
+<meta property="og:updated_time" content="2019-04-03T07:14:32.821Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue my work">
+<meta name="twitter:title" content="Vue">
 <meta name="twitter:description" content="创建vue项目">
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Vue my work | Mr.M</title>
+  <title>Vue | Mr.M</title>
   
 
 
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue my work
+          <h1 class="post-title" itemprop="name headline">Vue
 
               
             
@@ -415,30 +415,14 @@
         <h2 id="安装vue"><a href="#安装vue" class="headerlink" title="安装vue"></a>安装vue</h2><p>命令 npm install -g @vue/cli</p>
 <p>查看版本 vue –version</p>
 <h2 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h2><p>创建项目 vue create hello-world</p>
-<h2 id="安装express"><a href="#安装express" class="headerlink" title="安装express"></a>安装express</h2><p>npm install -g express-generator  // 注意中间不是空格，否则是安装express 和 generator两个包</p>
-<p>创建express文件</p>
-<p>方法一：用webstrom</p>
-<p>//express（images/nodeNewProject.jpg）</p>
-<p>file =&gt; new =&gt; project =&gt; Node.js Express App<br>在View Engine中选择用的模板(类似于java中jsp)<br>Stylesheet Engine 中选 css预处理方式</p>
-<p>方法二： 命令行<br>参考<a href="http://www.expressjs.com.cn/starter/generator.html官网" target="_blank" rel="noopener">http://www.expressjs.com.cn/starter/generator.html官网</a></p>
-<p>$ express –view=pug myapp  //–view=pug 选择模板 可不写， myapp 名称</p>
-<p>安装所有依赖包：</p>
-<p>$ cd myapp<br>$ npm install</p>
-<p>在 MacOS 或 Linux 中，通过如下命令启动此应用：<br>$ DEBUG=myapp:* npm start</p>
-<h2 id="将项目提交到git"><a href="#将项目提交到git" class="headerlink" title="将项目提交到git"></a>将项目提交到git</h2><p>（My git 2646…<a href="mailto:11@qq.com" target="_blank" rel="noopener">11@qq.com</a> phone+name）<br>git 上点 New repository</p>
-<p>1、（先进入项目文件夹）通过命令 git init 把这个目录变成git可以管理的仓库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure></p>
-<p>2、把文件添加到版本库中，使用命令 git add .添加到暂存区里面去，不要忘记后面的小数点“.”，意为添加文件夹下的所有文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .   // 不要丢了空格和点</span><br></pre></td></tr></table></figure></p>
-<p>3、用命令 git commit告诉Git，把文件提交到仓库。引号内为提交说明<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">'first commit'</span></span><br></pre></td></tr></table></figure></p>
-<p>4、关联到远程库<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin  // 你的远程库地址</span><br></pre></td></tr></table></figure></p>
-<p>如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/githubusername/demo.git</span><br></pre></td></tr></table></figure></p>
-<p>5、获取远程库与本地同步合并（如果远程库不为空必须做这一步，否则后面的提交会失败）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull --rebase origin master</span><br></pre></td></tr></table></figure></p>
-<p>先不推送，<br>在编辑器中 preferences =&gt; plugins 搜索ignore，install .ignore，<br>新建 .gitignore文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Created by .ignore support plugin (hsz.mobi)</span></span><br><span class="line">.idea/</span><br><span class="line">*.iml</span><br><span class="line">node_modules/</span><br></pre></td></tr></table></figure></p>
-<p>以上三个文件不上传</p>
-<p>6、把本地库的内容推送到远程，使用 git push命令，实际上是把当前分支master推送到远程。执行此命令后会要求输入用户名、密码，验证通过后即开始上传。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master   // 设定主分支并上传</span><br></pre></td></tr></table></figure></p>
-<p>初次创建报错： fatal: Couldn’t find remote ref master  不用管</p>
-<h2 id="在node项目中使用monogDB"><a href="#在node项目中使用monogDB" class="headerlink" title="在node项目中使用monogDB"></a>在node项目中使用monogDB</h2><p>1 导入monogDB连接模块，express 官方介绍的是mongoskin模块，这里介绍通过mongoose安装</p>
-<p>2 项目下执行命令 npm install mongoose -save 安装保存到node_modules，<br>也可以在package.json中配置”mongoose”: “^4.4.12”,然后命令npm install 安装。<a href="https://github.com/Automattic/mongoose" target="_blank" rel="noopener">https://github.com/Automattic/mongoose</a></p>
-<p>坑！！<br>将文件命名为类似模块名的名字 mongodb.js<br>const mongodb = require(‘./mongodb’);<br>如果全局有这个变量 会覆盖全局的</p>
+<h2 id="vue学习"><a href="#vue学习" class="headerlink" title="vue学习"></a>vue学习</h2><h4 id="模板语法"><a href="#模板语法" class="headerlink" title="模板语法"></a>模板语法</h4><p>1、v-html  相当于插值表达式中写html 会编译<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div v-html=<span class="string">"msg"</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">export</span> default &#123;</span><br><span class="line">        <span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                msg: <span class="string">'&lt;span style="color:red"&gt;Hello World&lt;/span&gt;'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2、v-bind<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-html=<span class="string">"msg"</span> id=<span class="string">"&#123;&#123;id&#125;&#125;"</span>&gt;&lt;/div&gt;  //错误</span><br><span class="line">data:&#123;</span><br><span class="line">    id:box</span><br><span class="line">&#125;</span><br><span class="line">&lt;div v-html=<span class="string">"msg"</span> v-bind:”id“&gt;&lt;/div&gt; //正确</span><br><span class="line">&lt;div v-html=<span class="string">"msg"</span> :id=”id“&gt;&lt;/div&gt; //正确</span><br></pre></td></tr></table></figure></p>
+<h4 id="data属性的三种写法"><a href="#data属性的三种写法" class="headerlink" title="data属性的三种写法"></a>data属性的三种写法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:<span class="string">'#app'</span>,</span><br><span class="line">        data:&#123;</span><br><span class="line">            isLogin: <span class="literal">false</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:<span class="string">'#app'</span>,</span><br><span class="line">        data: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                isLogin: <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="built_in">type</span>=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:<span class="string">'#app'</span>,</span><br><span class="line">        data: <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            <span class="built_in">return</span> &#123;</span><br><span class="line">                isLogin: <span class="literal">false</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>区别：（多实例共享）<br>在简单的Vue实例中，没什么区别，因为你app对象不会被复用。<br>但是在组件中，因为可能在多处调用同一组件，所以为了不让多处的组件共享同一data对象，只能返回函数。<br>第一种不是返回函数， 第三种是第二种的es6写法</p>
+<h4 id="计算属性"><a href="#计算属性" class="headerlink" title="计算属性"></a>计算属性</h4><p>eg：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    一共&#123;&#123;all&#125;&#125;,拿走&#123;&#123;away&#125;&#125;,还剩&#123;&#123;last&#125;&#125;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line"><span class="function"><span class="title">data</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        all: 100,</span><br><span class="line">        away: 50</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br><span class="line">computed: &#123;</span><br><span class="line">    last: <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> this.all - this.away</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line"><span class="comment">#### vuex</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">vuex 组件间数据共用数据</span><br><span class="line">state 组件们所共享的数据</span><br><span class="line">mutations 如何改变数据</span><br><span class="line">actions 何时改变数据</span><br><span class="line"></span><br><span class="line">1、安装  npm i vuex</span><br><span class="line">2、stroe.js</span><br><span class="line"></span><br><span class="line">``` bash</span><br><span class="line">import Vue from <span class="string">'vue'</span>;</span><br><span class="line">import Vuex from <span class="string">'vuex'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(<span class="string">'Vuex'</span>);   // 将vuex加入框架</span><br><span class="line"></span><br><span class="line">const state = &#123;</span><br><span class="line">    count: 1</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const mutations = &#123;</span><br><span class="line">    increment(state) &#123;</span><br><span class="line">        state.count++;</span><br><span class="line">    &#125;,</span><br><span class="line">    decrement(state) &#123;</span><br><span class="line">        state.count--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const actions = &#123;</span><br><span class="line">    increment: (&#123;commit&#125;) =&gt; &#123;</span><br><span class="line">        commit(<span class="string">'increment'</span>)</span><br><span class="line">    &#125;,</span><br><span class="line">    decrement: (&#123;commit&#125;) =&gt; &#123;</span><br><span class="line">        commit(<span class="string">'decrement'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default new Vuex.Store(&#123;state, mutations, actions&#125;)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -473,7 +457,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://jiejiema.github.io/vue/" title="Vue my work">https://jiejiema.github.io/vue/</a>
+    <a href="https://jiejiema.github.io/vue/" title="Vue">https://jiejiema.github.io/vue/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -508,6 +492,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/taskTimeEg/" rel="prev" title="tasktime">
+                tasktime <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -578,7 +566,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -668,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vue"><span class="nav-number">1.</span> <span class="nav-text">安装vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">3.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将项目提交到git"><span class="nav-number">4.</span> <span class="nav-text">将项目提交到git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">5.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装vue"><span class="nav-number">1.</span> <span class="nav-text">安装vue</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建vue项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vue学习"><span class="nav-number">3.</span> <span class="nav-text">vue学习</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模板语法"><span class="nav-number">3.0.1.</span> <span class="nav-text">模板语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#data属性的三种写法"><span class="nav-number">3.0.2.</span> <span class="nav-text">data属性的三种写法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#计算属性"><span class="nav-number">3.0.3.</span> <span class="nav-text">计算属性</span></a></li></ol></li></ol></div>
             
 
           </div>
