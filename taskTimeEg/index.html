@@ -104,10 +104,17 @@
 <meta property="og:site_name" content="Mr.M">
 <meta property="og:description" content="创建vue项目">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T03:50:12.008Z">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/mongo.png">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/users.png">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/cookieNode.png">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/cookie.png">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/httpheader.png">
+<meta property="og:image" content="https://jiejiema.github.io/taskTimeEg/error.png">
+<meta property="og:updated_time" content="2019-04-12T04:17:46.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tasktime">
 <meta name="twitter:description" content="创建vue项目">
+<meta name="twitter:image" content="https://jiejiema.github.io/taskTimeEg/mongo.png">
 
 
 
@@ -435,7 +442,24 @@
 <p>初次创建报错： fatal: Couldn’t find remote ref master  不用管</p>
 <h2 id="在node项目中使用monogDB"><a href="#在node项目中使用monogDB" class="headerlink" title="在node项目中使用monogDB"></a>在node项目中使用monogDB</h2><p>1 导入monogDB连接模块，express 官方介绍的是mongoskin模块，这里介绍通过mongoose安装</p>
 <p>2 项目下执行命令 npm install mongoose -save 安装保存到node_modules，<br>也可以在package.json中配置”mongoose”: “^4.4.12”,然后命令npm install 安装。<a href="https://github.com/Automattic/mongoose" target="_blank" rel="noopener">https://github.com/Automattic/mongoose</a></p>
-<p>坑！！<br>将文件命名为类似模块名的名字 mongodb.js<br>const mongodb = require(‘./mongodb’);<br>如果全局有这个变量 会覆盖全局的</p>
+<h2 id="遇到的坑-注意的问题！！"><a href="#遇到的坑-注意的问题！！" class="headerlink" title="遇到的坑/注意的问题！！"></a>遇到的坑/注意的问题！！</h2><p>将文件命名为类似模块名的名字 mongodb.js<br>const mongodb = require(‘./mongodb’);<br>如果全局有这个变量 会覆盖全局的</p>
+<h4 id="axios引用问题"><a href="#axios引用问题" class="headerlink" title="axios引用问题"></a>axios引用问题</h4><p>在 main.ts中引用axios（import axios from ‘axios’），不能直接在xx.vue中使用，将vue改为vue的原型链，就可以解决这个问题，<br>大概是因为 vue认为axios是第三方，框架并未主动将其绑定到 Vue 实例，需要手动挂载到vue原型上<br>main.ts中加  Vue.prototype.$axioss = axios；<br>在xx.vue中： this.$axioss.post（）……</p>
+<h4 id="注册-node向mongodb中插入数据"><a href="#注册-node向mongodb中插入数据" class="headerlink" title="注册 node向mongodb中插入数据"></a>注册 node向mongodb中插入数据</h4><img src="/taskTimeEg/mongo.png"> 
+<img src="/taskTimeEg/users.png"> 
+<h4 id="vue一个页面向另一个页面带参数跳转"><a href="#vue一个页面向另一个页面带参数跳转" class="headerlink" title="vue一个页面向另一个页面带参数跳转"></a>vue一个页面向另一个页面带参数跳转</h4><p>相当于get url上显示参数, path！路径中带’/‘! query！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">跳转传参数的页面</span><br><span class="line">methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">routeTo</span></span>() &#123;</span><br><span class="line">        this.<span class="variable">$router</span>.push(&#123;</span><br><span class="line">            path: <span class="string">'/login'</span>,</span><br><span class="line">            query: &#123;</span><br><span class="line">                username: result.data[0].username</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">接收参数页面</span><br><span class="line"><span class="function"><span class="title">created</span></span>()&#123;   // 初始化加载</span><br><span class="line">    this.getUser()</span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">getUser</span></span>() &#123;</span><br><span class="line">        const routerParams = this.<span class="variable">$route</span>.params.username;</span><br><span class="line">        console.log(routerParams, <span class="string">'routerParams'</span>)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>相当于post url上不显示参数, name！路径中不带’/‘! params！<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">跳转传参数的页面</span><br><span class="line">methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">routeTo</span></span>() &#123;</span><br><span class="line">        this.<span class="variable">$router</span>.push(&#123;</span><br><span class="line">            name: <span class="string">'login'</span>,</span><br><span class="line">            params: &#123;</span><br><span class="line">                username: result.data[0].username</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">接收参数页面</span><br><span class="line"><span class="function"><span class="title">created</span></span>()&#123;   // 初始化加载</span><br><span class="line">    this.getUser()</span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">    <span class="function"><span class="title">getUser</span></span>() &#123;</span><br><span class="line">        const routerParams = this.<span class="variable">$route</span>.params.username;</span><br><span class="line">        console.log(routerParams, <span class="string">'routerParams'</span>)</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+<p>mounted 和 created 为vue初始化函数</p>
+<p>有些页面需要拿到用户信息，如username，后端存储user，<br>1、可以存到cookie里，<br>npm install cookie-parser –save</p>
+<p>node中写var cookieParser = require(‘cookie-parser’)<br>app.use(cookieParser())<br>根据http协议，会自动带到浏览器cookies中，不安全，且cookie容量小</p>
+<p>2、可以存到session里，<br>npm install express-session –save</p>
+<p>var session = require(‘express-session’)<br>app.use(session({<br>    secret: ‘imooc’<br>}))<br>需要的话res返回给前端，相对安全。</p>
+<p>session：<br>只有session id放在cookie里，session data不是<br>express 1.5.0+ 不需要使用cookie-parser中间件来使session工作<br>如果cookie-parser和session之间的secret不同会出错</p>
+<p>req返回的session<br>session:<br>   Session {<br>        cookie:<br>        { path: ‘/‘,<br>            _expires: 2019-04-11T03:03:27.959Z,<br>            originalMaxAge: 180000,<br>            httpOnly: true<br>        }<br>    },</p>
+<p>node中设置了session，将会有一个cookie呈现<br>可以返回给前端，但是前端拿不到，也不能更改<br><img src="/taskTimeEg/cookieNode.png" title="cookie"><br><img src="/taskTimeEg/cookie.png" title="cookie"><br>在请求头中可以看到，在下一次请求中会带着<br><img src="/taskTimeEg/httpheader.png" title="cookie"> </p>
+<h3 id="一个特别弱智的报错"><a href="#一个特别弱智的报错" class="headerlink" title="一个特别弱智的报错"></a>一个特别弱智的报错</h3><img src="/taskTimeEg/error.png" title="error"> 
+<p>一开始以为是特别高端的报错，百度各种解决方案。就没仔细看代码，结果是因为模板里没写<template></template>!!<br>还有 <template>一定有且只有一个<div></div></template></p>
 
       
     </div>
@@ -496,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/vue/" rel="next" title="Vue">
+                <i class="fa fa-chevron-left"></i> Vue
               </a>
             
           </div>
@@ -505,10 +529,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/vue/" rel="prev" title="Vue">
-                Vue <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -669,7 +689,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">1.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将项目提交到git"><span class="nav-number">2.</span> <span class="nav-text">将项目提交到git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">3.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装express"><span class="nav-number">1.</span> <span class="nav-text">安装express</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将项目提交到git"><span class="nav-number">2.</span> <span class="nav-text">将项目提交到git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在node项目中使用monogDB"><span class="nav-number">3.</span> <span class="nav-text">在node项目中使用monogDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的坑-注意的问题！！"><span class="nav-number">4.</span> <span class="nav-text">遇到的坑/注意的问题！！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#axios引用问题"><span class="nav-number">4.0.1.</span> <span class="nav-text">axios引用问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#注册-node向mongodb中插入数据"><span class="nav-number">4.0.2.</span> <span class="nav-text">注册 node向mongodb中插入数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vue一个页面向另一个页面带参数跳转"><span class="nav-number">4.0.3.</span> <span class="nav-text">vue一个页面向另一个页面带参数跳转</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一个特别弱智的报错"><span class="nav-number">4.1.</span> <span class="nav-text">一个特别弱智的报错</span></a></li></ol></div>
             
 
           </div>
