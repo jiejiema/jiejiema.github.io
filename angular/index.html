@@ -104,13 +104,17 @@
 <meta property="og:site_name" content="Mr.M">
 <meta property="og:description" content="angular踩坑">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://jiejiema.github.io/angular/form1.jpg">
+<meta property="og:image" content="https://jiejiema.github.io/angular/form2.jpg">
+<meta property="og:image" content="https://jiejiema.github.io/angular/form3.jpg">
+<meta property="og:image" content="https://jiejiema.github.io/angular/form4.jpg">
 <meta property="og:image" content="https://jiejiema.github.io/angular/angular.png">
 <meta property="og:image" content="https://jiejiema.github.io/angular/ang1.png">
-<meta property="og:updated_time" content="2019-04-22T08:24:42.636Z">
+<meta property="og:updated_time" content="2019-04-23T07:27:06.521Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular">
 <meta name="twitter:description" content="angular踩坑">
-<meta name="twitter:image" content="https://jiejiema.github.io/angular/angular.png">
+<meta name="twitter:image" content="https://jiejiema.github.io/angular/form1.jpg">
 
 
 
@@ -415,7 +419,16 @@
       
 
       
-        <h2 id="坑们"><a href="#坑们" class="headerlink" title="坑们"></a>坑们</h2><img src="/angular/angular.png"> 
+        <h2 id="模板式表单"><a href="#模板式表单" class="headerlink" title="模板式表单"></a>模板式表单</h2><p>只能使用指令定义模型NgForm NgModel NgModelGroup<br>使用NgForm用来代表整个表单，自动添加到每个form标签上，原form标签被ng接管，这时，在原form标签中的 form action=”/regist” method=”post”等 都不管用了。<br>NgForm 隐式创建了FormGroup类的实例，这个类用来代表表单的数据模型并且存储表单数据<br>标有ngform指令的html标签 如form会自动发现所有标有ngmodel指令的子元素并将它们的值添加到表单的数据模型中<br>ngform 可以在form标签之外的标签使用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">注意 1 &lt;div ngForm&gt; 与 &lt;form ngForm&gt;一样</span><br><span class="line">2 如果不想ang接管表单，要加 &lt;form ngNoForm&gt;</span><br></pre></td></tr></table></figure>
+<p>ngModel 代表表单中的一个字段 隐式创建一个FormControl实例来代表字段的数据模型并用FormControl类型的对象来存储字段的值<br>注意 标记了ngForm指令的html元素内 使用ngModel指令不需要用[()]括起来 不需要把ngModel绑定在组件的某个属性， 要为添加了ngModel的元素加一个name</p>
+<p>模板本地变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form <span class="comment">#myform="ngForm"&gt;</span></span><br><span class="line">&lt;div&gt;</span><br><span class="line">	&#123;&#123;myForm.value | json&#125;   // ang提供的json管道</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="响应式表单"><a href="#响应式表单" class="headerlink" title="响应式表单"></a>响应式表单</h2><p>1、创建一个数据模型<br>用来保存表单数据的数据结构 由FormControl FormGroup FormArray组成<br>FormControl<br>FormGroup 多个FormControl集合 一个无效则FormGroup无效<br>整个表单或一个表单字段的固定子级</p>
+<p>eg: formModel: FormGroup = new FormGroup({<br>    form: new FormControl(),<br>    to: new FormControl(),<br>})</p>
+<p>FormArray 和FormGroup类似 多了一个长度属性<br>代表一个可以增长的字段集合，eg 允许用户输入任意数量的email<br>emails: FormArray = new FormArray({<br>    new FormControl(<a href="mailto:&#39;XX@aaa.com" target="_blank" rel="noopener">&#39;XX@aaa.com</a>),<br>    new FormControl(<a href="mailto:&#39;XX@bbb.com" target="_blank" rel="noopener">&#39;XX@bbb.com</a>),<br>})<br>没有key 只能通index访问</p>
+<p>指令：<br><img src="/angular/form1.jpg"><br>第二列 formGroup formControl使用属性绑定时使用的指令 FormArray不能通过属性绑定指令来绑定<br>第三列 可以使用属性名字连接数据模型和dom元素<br>响应式表单指令：form…<br>模板式表单： ng…<br>注意 1、响应式表单不可引用 不能用模板本地变量，不能通过创建模板本地变量引用指令的实例，不能拿到FormGroup等类。为了区分，模板式表单不能访问数据模型相关的类，只能拿到数据，可通过模板本地变量操作数据（只能在html中，不能在ts中）。响应式能访问类，不可引用，不能在模板中操作 （只能在ts中，不能在html中）<br>2，要在.module.ts中引入相应的module<br>模板式表单 FormsModule<br>响应式表单 ReactiveFormsModule</p>
+<p>以下栗子演示了 FormGroup FormControl FormArray 怎么用，FormArray多用于循环中 以及用在循环中如何取到值<br>eg：<br><img src="/angular/form2.jpg"><br><img src="/angular/form3.jpg"><br><img src="/angular/form4.jpg"><br>let emails = this.formModel.get(‘emails’) 拿到的是FromArray类型的对象  as 转成FormArray</p>
+<h2 id="坑们"><a href="#坑们" class="headerlink" title="坑们"></a>坑们</h2><img src="/angular/angular.png"> 
 <p>以上报错，新建的service没有加到module里，ng g service 也不会自动加到module里<br><img src="/angular/ang1.png"> </p>
 
       
@@ -556,7 +569,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">6</span>
+                    <span class="site-state-item-count">7</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -650,7 +663,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#坑们"><span class="nav-number">1.</span> <span class="nav-text">坑们</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模板式表单"><span class="nav-number">1.</span> <span class="nav-text">模板式表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应式表单"><span class="nav-number">2.</span> <span class="nav-text">响应式表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#坑们"><span class="nav-number">3.</span> <span class="nav-text">坑们</span></a></li></ol></div>
             
 
           </div>

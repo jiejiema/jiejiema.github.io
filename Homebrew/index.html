@@ -96,25 +96,25 @@
 
 
 
-  <meta name="description" content="使用homebrew安装，便于维护">
-<meta name="keywords" content="soft">
+  <meta name="description" content="Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。">
+<meta name="keywords" content="tools">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mac 安装MongoDB redis">
-<meta property="og:url" content="https://jiejiema.github.io/mongodb/index.html">
+<meta property="og:title" content="Homebrew">
+<meta property="og:url" content="https://jiejiema.github.io/Homebrew/index.html">
 <meta property="og:site_name" content="Mr.M">
-<meta property="og:description" content="使用homebrew安装，便于维护">
+<meta property="og:description" content="Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-23T02:29:41.632Z">
+<meta property="og:updated_time" content="2019-04-22T08:36:17.509Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Mac 安装MongoDB redis">
-<meta name="twitter:description" content="使用homebrew安装，便于维护">
+<meta name="twitter:title" content="Homebrew">
+<meta name="twitter:description" content="Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。">
 
 
 
 
 
 
-  <link rel="canonical" href="https://jiejiema.github.io/mongodb/">
+  <link rel="canonical" href="https://jiejiema.github.io/Homebrew/">
 
 
 
@@ -124,7 +124,7 @@
   };
 </script>
 
-  <title>Mac 安装MongoDB redis | Mr.M</title>
+  <title>Homebrew | Mr.M</title>
   
 
 
@@ -327,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://jiejiema.github.io/mongodb/">
+    <link itemprop="mainEntityOfPage" href="https://jiejiema.github.io/Homebrew/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.M">
@@ -344,7 +344,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Mac 安装MongoDB redis
+          <h1 class="post-title" itemprop="name headline">Homebrew
 
               
             
@@ -375,7 +375,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/soft/" itemprop="url" rel="index"><span itemprop="name">soft</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a></span>
 
                 
                 
@@ -396,7 +396,7 @@
           
 
           
-            <div class="post-description">使用homebrew安装，便于维护</div>
+            <div class="post-description">Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。</div>
           
 
         </div>
@@ -412,26 +412,25 @@
       
 
       
-        <p>Homebrew是macOS下的软件包管理器，类似于ubuntu的apt，是使用mac系统必备的开发者工具。</p>
-<p>介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。<br>关系型和非关系型数据库区别：<br>如:<br>关系型：要建立一个班级和学生的关系，只能建一个班级表class，一个学生表（stdent，里边有zhangsan，lisi……）join建立关系<br>非关系型：可以用json 只要层级关系清楚 一个表就建立关系.<br>为什么选择mongodb？和前端技术栈契合度很高。如建立一个前端 vue 服务端node的项目，可以用js 从头写到尾<br>应用比较广泛的mysql mongodb，用mysql的话，node查询数据库时要求前端人员会写sql。</p>
-<p>mongoose 是连接mongodb的一个库</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>访问<a href="https://brew.sh/index_zh-cn" target="_blank" rel="noopener">Homebrew</a> 官网获取安装命令。<br>安装完成后先执行以下命令安装 curl 和 wget。</p>
+        <p>只要是能用 homebrew 安装的软件，就优先使用 homebrew 安装。一般来说使用 homebrew 安装的都是开发相关的软件，日常使用的比如微信之类的都是通过官网下载安装包或者在 app store 安装。</p>
+<h2 id="安装-Homebrew"><a href="#安装-Homebrew" class="headerlink" title="安装 Homebrew"></a>安装 Homebrew</h2><p>访问Homebrew 官网获取安装命令。</p>
+<p>安装完成后先执行以下命令安装 curl 和 wget。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew install curl</span><br><span class="line">brew install wget</span><br><span class="line">curl --version</span><br><span class="line">wget --version</span><br></pre></td></tr></table></figure>
 <h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">brew list <span class="comment"># 列出当前已经安装的包</span></span><br><span class="line">brew search <span class="variable">$FORMULA</span> <span class="comment"># 搜索一个想安装的包</span></span><br><span class="line">brew info <span class="variable">$FORMULA</span> <span class="comment"># 列出指定包的相关信息</span></span><br><span class="line">brew info <span class="comment"># 显示安装了包数量，文件数量，和总占用空间</span></span><br><span class="line">brew deps --installed --tree <span class="comment"># 查看已安装的包的依赖，树形显示</span></span><br><span class="line"></span><br><span class="line">brew install <span class="variable">$FORMULA</span> <span class="comment"># 安装指定包</span></span><br><span class="line">brew uninstall <span class="variable">$FORMULA</span> <span class="comment"># 卸载指定包</span></span><br><span class="line"></span><br><span class="line">brew update <span class="comment"># 升级brew自身和源仓库</span></span><br><span class="line">brew outdated <span class="comment"># 列出有哪些包可以更新</span></span><br><span class="line">brew upgrade <span class="variable">$FORMULA</span> <span class="comment"># 更新指定的包</span></span><br><span class="line">brew upgrade <span class="comment"># 更新所有的可更新包</span></span><br><span class="line"></span><br><span class="line">brew cleanup <span class="variable">$FORMULA</span> <span class="comment"># 清理指定包的旧版本及安装文件</span></span><br><span class="line">brew cleanup <span class="comment"># 清理所有包的旧版本及安装文件</span></span><br><span class="line">brew cleanup -n <span class="comment"># 查看可清理的旧版本包，不执行实际操作</span></span><br><span class="line"></span><br><span class="line">brew pin <span class="variable">$FORMULA</span> <span class="comment"># 锁定某个包</span></span><br><span class="line">brew unpin <span class="variable">$FORMULA</span> <span class="comment"># 取消锁定</span></span><br><span class="line"></span><br><span class="line">brew cask install/info/list... <span class="comment"># 这一系列的命令用来管理以二进制方式分发的包，比如docker和oracle jdk</span></span><br><span class="line">brew tap <span class="comment"># 用来添加第三方源仓库，类似apt的ppa，不加参数将列出已经添加的源仓库</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装MongoDB"><a href="#安装MongoDB" class="headerlink" title="安装MongoDB"></a>安装MongoDB</h2><p>安装redis 即 把 mongodb 替换为 redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew install mongodb</span><br><span class="line">brew services run mongodb <span class="comment">#启动服务</span></span><br><span class="line">brew services list  <span class="comment"># 查看当前服务列表</span></span><br></pre></td></tr></table></figure></p>
-<p>查看是否安装成功  which mongod<br>启动 mongod</p>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew info mongodb  //找到mongodb 目录</span><br></pre></td></tr></table></figure>
-<p>可视化工具 robo<br><a href="https://robomongo.org/download" target="_blank" rel="noopener">https://robomongo.org/download</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo   // 在命令行内访问 没启动的话不会启动</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services list  // 查看所有启动的服务</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew services start mongodb  // 启动</span><br></pre></td></tr></table></figure>
-<h2 id="mongoose"><a href="#mongoose" class="headerlink" title="mongoose"></a>mongoose</h2><p>操作mongodb 的工具 mongoose<br><a href="https://mongoose.shujuwajue.com/" target="_blank" rel="noopener">https://mongoose.shujuwajue.com/</a><br>模式schemas 描述数据表，不需要手动创建表，用代码描述模型<br>schemaTypes<br>String; Number; Date; Buffer; Boolean; Mixed; Objectid; Array<br>自定义类型</p>
-<p>模型models 由schemas发布生成， 对数据库增删改查，是由它操作</p>
-<p>安装<br>npm i mongoose</p>
-<p>对数据库配置<br>创建配置文件<br>创建文件夹 =&gt; 创建配置文件 config.js<br>在dbs文件夹中<br>export default ({<br>    dbs: ‘mongodb://127.0.0.1:27017/dbs   // 创建dbs 数据库地址127……<br>})</p>
-<p>在dbs文件夹中建models文件夹<br>touch models/person.js  （person.js文件名就是collection的名字）<br>import mongoose from ‘mongoose’<br>// 建表<br>let personSchema = new mongoose.Schema({<br>    name: String,     // collection内部数据<br>    age: Number<br>})</p>
-<p>// 由schema生成一个model 导出<br>// 由schema描述了数据库对应的collection（表），和模型（model）做关联<br>// expoer default mongoose.model(‘person’,personSchema)  可能报错<br>module.exports = mongoose.model(‘person’,personSchema)<br>app.js中 做连接<br>const mongoose = require(‘mongoose’)<br>const dbConfig = require(‘./dbs/config’)</p>
-<p>// 服务器程序连接数据库<br>mongoose.connect(dbConfig.dbs, { // dbs为config中的变量dbs<br>    useNewParser: true<br>})</p>
+<p>brew info这个命令很有用，可以显示出当前包的版本、安装路径、依赖包，以及一些提示信息，比如 Nginx 会提示你可以加到 brew services 中，PostgreSQL 会告诉你如何从旧版本迁移数据。这些信息会在包安装完成后自动显示，如果忘了的话可以用这个命令很方便地查看。</p>
+<p>可以在/usr/local/Homebrew/Library/Taps这个路径下找到已经添加的第三方源仓库。</p>
+<h2 id="安装常用的包"><a href="#安装常用的包" class="headerlink" title="安装常用的包"></a>安装常用的包</h2><p>不要卸载系统自带的 python2 和 ruby，可能导致系统自身某些功能因为缺失依赖而发生错误。</p>
+<p>brew install python # 安装python3<br>brew install nodejs # 安装nodejs<br>brew install go # 安装go语言<br>brew install ruby # 安装最新版本的ruby</p>
+<h2 id="安装-docker"><a href="#安装-docker" class="headerlink" title="安装 docker"></a>安装 docker</h2><p>brew cask install docker</p>
+<h2 id="安装-JDK、Maven、Gradle"><a href="#安装-JDK、Maven、Gradle" class="headerlink" title="安装 JDK、Maven、Gradle"></a>安装 JDK、Maven、Gradle</h2><p>JDK</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 安装最新版本的JDK</span></span><br><span class="line">brew cask install java</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装java8</span></span><br><span class="line">brew tap caskroom/versions</span><br><span class="line">brew update</span><br><span class="line">brew cask install java8</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装openjdk</span></span><br><span class="line">brew tap AdoptOpenJDK/openjdk</span><br><span class="line">brew cask install adoptopenjdk</span><br></pre></td></tr></table></figure>
+<p>安装完毕后，在终端输入java -version即可看到正常输出。在 Intellij Idea 中，项目需要手动配置 JDK 路径，命令行输入/usr/libexec/java_home即可得到，通常是：/Library/Java/JavaVirtualMachines/&lt;你安装的jdk版本&gt;.jdk/Contents/Home。</p>
+<h2 id="使用-jenv-管理多个版本的-JDK"><a href="#使用-jenv-管理多个版本的-JDK" class="headerlink" title="使用 jenv 管理多个版本的 JDK"></a>使用 jenv 管理多个版本的 JDK</h2><p>jenv 只是版本切换工具，不负责安装。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">brew install jenv</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向jenv中手动添加本地java安装路径</span></span><br><span class="line">jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/</span><br><span class="line">oracle64-1.8.0.192 added</span><br><span class="line">1.8.0.192 added</span><br><span class="line">1.8 added</span><br><span class="line"></span><br><span class="line">jenv versions <span class="comment"># 查看当前所有版本</span></span><br><span class="line">jenv remove 1.8.0.192 <span class="comment"># 删除掉一些重复的版本</span></span><br><span class="line"></span><br><span class="line">jenv <span class="built_in">local</span> 1.8 <span class="comment"># 切换版本</span></span><br><span class="line">jenv <span class="built_in">which</span> java <span class="comment"># 当前java在硬盘上的路径</span></span><br></pre></td></tr></table></figure>
+<h2 id="springboot-cli"><a href="#springboot-cli" class="headerlink" title="springboot cli"></a>springboot cli</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">brew tap pivotal/tap</span><br><span class="line">brew install springboot</span><br></pre></td></tr></table></figure>
+<h2 id="安装-vim"><a href="#安装-vim" class="headerlink" title="安装 vim"></a>安装 vim</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">安装之前可以通过brew info vim查看参数信息。</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装vim，提供lua和python3的支持，并替换掉系统自带的vim。</span></span><br><span class="line">brew install vim --with-lua --with-python3 --with-override-system-vim</span><br></pre></td></tr></table></figure>
+<h2 id="安装数据库并注册服务"><a href="#安装数据库并注册服务" class="headerlink" title="安装数据库并注册服务"></a>安装数据库并注册服务</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">安装 redis、mongodb、mysql、postgresql 之后，使用brew services将数据库作为后台服务来管理。下面以 redis 为例：</span><br><span class="line"></span><br><span class="line">brew search redis</span><br><span class="line">brew info redis</span><br><span class="line">brew install redis</span><br><span class="line"></span><br><span class="line">brew services list  <span class="comment"># 查看当前服务列表</span></span><br><span class="line">brew services run redis  <span class="comment"># 启动为服务，但不注册，用户重新登录后不会自启动</span></span><br><span class="line">brew services start redis  <span class="comment"># 启动服务并注册，用户登录后自启动</span></span><br><span class="line">brew services stop redis   <span class="comment"># 停止服务并移除注册，用户登录后不再自启动</span></span><br><span class="line">brew services restart redis  <span class="comment"># 重启服务并注册</span></span><br><span class="line">brew services cleanup  <span class="comment"># 清除无用服务</span></span><br></pre></td></tr></table></figure>
+<h2 id="不推荐安装的"><a href="#不推荐安装的" class="headerlink" title="不推荐安装的"></a>不推荐安装的</h2><p>nvm</p>
 
       
     </div>
@@ -466,7 +465,7 @@
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
     
-    <a href="https://jiejiema.github.io/mongodb/" title="Mac 安装MongoDB redis">https://jiejiema.github.io/mongodb/</a>
+    <a href="https://jiejiema.github.io/Homebrew/" title="Homebrew">https://jiejiema.github.io/Homebrew/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！</li>
@@ -479,7 +478,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/soft/" rel="tag"># soft</a>
+            <a href="/tags/tools/" rel="tag"># tools</a>
           
         </div>
       
@@ -492,18 +491,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Homebrew/" rel="next" title="Homebrew">
-                <i class="fa fa-chevron-left"></i> Homebrew
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/hello-world/" rel="prev" title="Hello World">
-                Hello World <i class="fa fa-chevron-right"></i>
+              <a href="/mongodb/" rel="prev" title="Mac 安装MongoDB redis">
+                Mac 安装MongoDB redis <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -669,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装MongoDB"><span class="nav-number">3.</span> <span class="nav-text">安装MongoDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用"><span class="nav-number">4.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mongoose"><span class="nav-number">5.</span> <span class="nav-text">mongoose</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-Homebrew"><span class="nav-number">1.</span> <span class="nav-text">安装 Homebrew</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用命令"><span class="nav-number">2.</span> <span class="nav-text">常用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装常用的包"><span class="nav-number">3.</span> <span class="nav-text">安装常用的包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-docker"><span class="nav-number">4.</span> <span class="nav-text">安装 docker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-JDK、Maven、Gradle"><span class="nav-number">5.</span> <span class="nav-text">安装 JDK、Maven、Gradle</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-jenv-管理多个版本的-JDK"><span class="nav-number">6.</span> <span class="nav-text">使用 jenv 管理多个版本的 JDK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#springboot-cli"><span class="nav-number">7.</span> <span class="nav-text">springboot cli</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-vim"><span class="nav-number">8.</span> <span class="nav-text">安装 vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装数据库并注册服务"><span class="nav-number">9.</span> <span class="nav-text">安装数据库并注册服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#不推荐安装的"><span class="nav-number">10.</span> <span class="nav-text">不推荐安装的</span></a></li></ol></div>
             
 
           </div>
