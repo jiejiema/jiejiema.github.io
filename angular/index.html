@@ -110,7 +110,10 @@
 <meta property="og:image" content="https://jiejiema.github.io/angular/form4.jpg">
 <meta property="og:image" content="https://jiejiema.github.io/angular/angular.png">
 <meta property="og:image" content="https://jiejiema.github.io/angular/ang1.png">
-<meta property="og:updated_time" content="2019-04-25T08:04:01.771Z">
+<meta property="og:image" content="https://jiejiema.github.io/angular/port.png">
+<meta property="og:image" content="https://jiejiema.github.io/angular/port2.png">
+<meta property="og:image" content="https://jiejiema.github.io/angular/port3.png">
+<meta property="og:updated_time" content="2019-04-26T10:52:37.057Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angular">
 <meta name="twitter:description" content="angular踩坑">
@@ -432,6 +435,9 @@
 <p>非空断言操作符（!）<br>在 TypeScript 2.0 中，你可以使用 –strictNullChecks 标志强制开启严格空值检查。TypeScript 就会确保不存在意料之外的 null 或 undefined。<br>在这种模式下，有类型的变量默认是不允许 null 或 undefined 值的，如果有未赋值的变量，或者试图把 null 或 undefined 赋值给不允许为空的变量，类型检查器就会抛出一个错误。<br>使用非空断言操作符 告诉类型检查器，它不会为空。<br>与安全导航操作符不同的是，非空断言操作符不会防止出现 null 或 undefined。 它只是告诉 TypeScript 的类型检查器对特定的属性表达式，不做 “严格空值检测”。</p>
 <h2 id="坑们"><a href="#坑们" class="headerlink" title="坑们"></a>坑们</h2><img src="/angular/angular.png"> 
 <p>以上报错，新建的service没有加到module里，ng g service 也不会自动加到module里<br><img src="/angular/ang1.png"> </p>
+<p>angular该端口：<br>网上说的改 schema.json不成功！！</p>
+<p>解决方案：<br><img src="/angular/port.png"></p>
+<p>踩坑：<br>要连后台人员电脑的接口调试，所以改了以下代码<br><img src="/angular/port2.png"><br>用ng serve –port xxxx 启动<br>结果报错<br><img src="/angular/port3.png"><br>后台没连接成功  是因为 ng serve –port xxxx<br>是因为 后边的proxy 被舍掉了<br>“start”: “ng serve –host 0.0.0.0 –port 3000 –proxy-config proxy.conf.json”,</p>
 
       
     </div>
